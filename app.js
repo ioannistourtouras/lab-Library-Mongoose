@@ -105,16 +105,22 @@ mongoose
 })*/
 
 //  Iteration 7 - Update a Single Book
-Book.findByIdAndUpdate('65fd8ad83074841f740d6c05', {pages: 750})
+/*Book.findByIdAndUpdate('65fd8ad83074841f740d6c05', {pages: 750})
 .then((res)=> {
   console.log(res)
 })
 .catch((err)=> {
   console.log(err)
-})
+})*/
 
 //  Iteration 8 - Delete a Single Recipe
-
+Book.deleteOne({title: "The Hobbit"})
+.then((res)=> {
+  console.log(Book.find().then((res)=> {console.log(res)}))
+})
+.catch((err)=> {
+  console.log(err)
+})
 
 // Start the server
 app.listen(5005, () => console.log('My first app listening on port 3000!'));
