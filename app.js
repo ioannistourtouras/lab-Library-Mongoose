@@ -3,6 +3,8 @@ const logger = require("morgan");
 
 const app = express();
 
+const Book = require('./models/Book.model')
+
 // MIDDLEWARE
 app.use(logger("dev"));
 app.use(express.static("public"));
