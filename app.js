@@ -40,7 +40,7 @@ mongoose
 })*/
 
 //  Iteration 4 - Add Many Books
-Book.insertMany([{
+/*Book.insertMany([{
   title: "The Great Gatsby",
   author: "F. Scott Fitzgerald",
   pages: 180,
@@ -85,10 +85,14 @@ Book.insertMany([{
 })
 .catch((err)=> {
   console.log(err)
-})
+})*/
 
 
 //  Iteration 5 - Get All Recipes
+Book.find()
+.then((res)=> {
+  console.log(res)
+})
 
 
 //  Iteration 6 - Get a Single Book
