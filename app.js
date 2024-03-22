@@ -24,7 +24,20 @@ mongoose
 
 
 //  Iteration 3 - Create a Book
-
+Book.create({
+  title: "Harry Potter and the Deathly Hallows",
+  author: "JK Rowling",
+  pages: 607,
+  cover: "https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg",
+  genres: ["Thriller", "Mystery"],
+  isBestSeller: true
+})
+.then((res)=> {
+  console.log(res)
+})
+.catch((err)=> {
+  console.log(err)
+})
 
 //  Iteration 4 - Add Many Books
 
