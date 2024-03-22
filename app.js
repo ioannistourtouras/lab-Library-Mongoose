@@ -89,14 +89,20 @@ mongoose
 
 
 //  Iteration 5 - Get All Recipes
-Book.find()
+/*Book.find()
 .then((res)=> {
   console.log(res)
-})
+})*/
 
 
 //  Iteration 6 - Get a Single Book
-
+Book.findById('65fd8ad83074841f740d6c05')
+.then((res)=> {
+  console.log(res)
+})
+.catch((err)=> {
+  console.log(err)
+})
 
 //  Iteration 7 - Update a Single Book
 
